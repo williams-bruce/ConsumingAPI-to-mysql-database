@@ -1,0 +1,7 @@
+com\mycompany\bancoandfilmes\Following_production.class
+com\mycompany\bancoandfilmes\NewsDAO.class
+com\mycompany\bancoandfilmes\NewsMCU.class
+com\mycompany\bancoandfilmes\ServiceMCU.class
+com\mycompany\bancoandfilmes\Util.class
+com\mycompany\bancoandfilmes\Main.class
+com\mycompany\bancoandfilmes\CriarConexao.class

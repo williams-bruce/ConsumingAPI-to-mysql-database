@@ -4,6 +4,7 @@
  */
 package com.mycompany.bancoandfilmes.models.bo;
 
+import java.sql.Statement;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.DriverManager;
@@ -71,5 +72,29 @@ public class CriarConexao {
         }
         
         return conexao;
+    }
+
+
+    public void criarTableNews(){
+        Connection conexao = null;
+        try {
+            conexao = conexao();
+            Statement stmt = conexao.createStatement();
+
+            String sql = "CREATE TABLE NEWS("+
+            "days_until VARCHAR(20)," +
+            "overview VARCHAR(1024)," +
+            "poster_url VARCHAR(255)," +
+            "release_date VARCHAR(20)," +
+            "title VARCHAR(255)," +
+            "type VARCHAR(255));";
+
+            System.out.println("Created table STUDENT in given database...");
+            stmt.executeUpdate(sql);
+
+            conexao.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
